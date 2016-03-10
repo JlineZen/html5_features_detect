@@ -14,12 +14,11 @@
     return 'geolocation' in navigator;
   }
 
-
   /*** detect input features ***/
 
   function detect_input_features() {
     var input = document.createElement('input');
-    input.setAttribute('type', 'password');
+    input.setAttribute('type', 'date');
     return input.type !== 'text';
   }
 
@@ -68,7 +67,7 @@
   /*** support webworkers ***/
 
   function support_webworkers() {
-    return !!window.Workers;
+    return !!window.Worker;
   }
 
   /*** support offline ***/
@@ -77,19 +76,17 @@
     return !!window.applicationCache;
   }
 
-  return function() {
-    var support = {
-      location     : support_geolocation,
-      input        : detect_input_features,
-      placeholder  : detect_placeholder,
-      autofocus    : detect_autofocus,
-      history      : supports_history_api,
-      canvas       : detect_canvas,
-      video        : support_video,
-      localStorage : support_localStorage,
-      webworkers   :  support_webworkers,
-      offline      : supports_offline
-    };
-    return support;
-  }
+  return {
+    location     : support_geolocation,
+    input        : detect_input_features,
+    placeholder  : detect_placeholder,
+    autofocus    : detect_autofocus,
+    history      : supports_history_api,
+    canvas       : detect_canvas,
+    vedio        : support_video,
+    localStorage : support_localStorage,
+    webworkers   : support_webworkers,
+    offline      :  supports_offline
+  };
+
 }());

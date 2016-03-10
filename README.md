@@ -4,7 +4,7 @@ A list of functions used to detect HTML5 featues
 ```javascript
 var support = require('support');
 //support history pushState
-if(support.history) {
+if(support.history()) {
   //your code 
 }
 ```
