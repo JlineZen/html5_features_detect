@@ -1,0 +1,26 @@
+{
+  "name": "html5",
+  "version": "1.0.0",
+  "description": "functions detect html5 features",
+  "main": "html5_detect.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JlineZen/html5_features_detect.git"
+  },
+  "keywords": [
+    "html5"
+  ],
+  "author": "bjiang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JlineZen/html5_features_detect/issues"
+  },
+  "homepage": "https://github.com/JlineZen/html5_features_detect#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-uglify": "^1.5.3"
+  }
+}
